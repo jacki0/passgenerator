@@ -2,6 +2,8 @@ import telebot
 import random
 import string
 
+telebot.apihelper.proxy = {'https':'socks5h://166.62.121.76:3936'}
+
 bot = telebot.TeleBot('750269199:AAEtjTL-mj6qQJhr9B8u_LOYT87qSH4_EqI')
 keyboard1 = telebot.types.ReplyKeyboardMarkup(True, True)
 keyboard1.row('Числа и буквы', 'Числа, буквы и спецсимволы')
