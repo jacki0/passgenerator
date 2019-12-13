@@ -25,6 +25,6 @@ def passwordgeneration(message):
     password = ''.join(random.sample(symbols, length))
     bot.send_message(message.chat.id, password)
 
-server.run(host="0.0.0.0", port=os.environ.get('PORT', 80))
+server.run(host='0.0.0.0', port='5555')
 
 bot.polling()
