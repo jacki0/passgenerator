@@ -1,7 +1,6 @@
 import telebot
 import random
 import string
-import os
 
 bot = telebot.TeleBot('750269199:AAEtjTL-mj6qQJhr9B8u_LOYT87qSH4_EqI')
 keyboard1 = telebot.types.ReplyKeyboardMarkup(True, True)
