@@ -1,7 +1,10 @@
 import telebot
 import random
 import string
+import os
+from flask import Flask
 
+server = Flask(__name__)
 
 bot = telebot.TeleBot('750269199:AAEtjTL-mj6qQJhr9B8u_LOYT87qSH4_EqI')
 keyboard1 = telebot.types.ReplyKeyboardMarkup(True, True)
@@ -21,5 +24,7 @@ def passwordgeneration(message):
     length = random.randint(9,44)
     password = ''.join(random.sample(symbols, length))
     bot.send_message(message.chat.id, password)
+
+server.run(host="0.0.0.0", port=os.environ.get('PORT', 80))
 
 bot.polling()
