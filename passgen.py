@@ -21,5 +21,4 @@ def passwordgeneration(message):
     password = ''.join(random.sample(symbols, length))
     bot.send_message(message.chat.id, password)
 
-
 bot.polling()
